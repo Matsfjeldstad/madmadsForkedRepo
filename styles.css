@@ -1,5 +1,6 @@
 html {
   font-family: Montserrat;
+  background: black;
 }
 
 body {
@@ -49,21 +50,28 @@ body {
   width: auto;
   max-width: 1180px;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  position: relative;
 }
 
 #productimg {
+  max-height: 400px;
   max-width: 100%;
 }
 
 .imagecontainer {
-  max-width: 50%;
+  max-width: 40%;
+  margin-right: 10px;
 }
 
 .description {
-  justify-content: left;
+  justify-content: right;
   text-align: left;
-  max-width: 50%;
+  max-width: 40%;
+  border: red solid 10px;
+  margin-left: 10px;
+  display: inline-block;
 }
 
 button {
@@ -72,19 +80,14 @@ button {
   border-radius: 5%;
   padding: 5px;
   margin: 0 auto;
-  display: block;
-  float: center;
-}
-
-.product-column {
-  display: flex;
+  display: inline-block;
 }
 
 h2 {
   color: var(--brand-green);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 810px) {
   .product-container,
   .imagecontainer,
   .description {
@@ -94,10 +97,10 @@ h2 {
 
   #productimg {
     max-width: 80%;
+    max-height: 250px;
   }
 
   .imagecontainer {
-    max-width: 85%;
     align-items: center;
   }
 
@@ -137,7 +140,9 @@ footer {
 }
 
 footer {
+  margin-top: 40px;
   text-align: center;
+  height: 125px;
 }
 
 .inner_header {
