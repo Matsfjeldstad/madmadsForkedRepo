@@ -5,6 +5,7 @@ html {
 
 body {
   color: var(--brand-white);
+  height: auto;
 }
 
 :root {
@@ -42,7 +43,7 @@ body {
 
 .col {
   flex: 20%;
-  padding: 5px;
+  /*padding: 5px;*/
   flex-basis: 100%;
   /*border: 1px solid chartreuse;*/
   justify-content: space-evenly;
@@ -68,7 +69,7 @@ body {
   max-width: 1180px;
   margin: 0 auto;
   justify-content: space-evenly;
-  padding-top: 20px;
+  padding-top: 10px;
   position: relative;
 }
 
@@ -104,6 +105,12 @@ h2 {
   color: var(--brand-green);
 }
 
+.buttoncontainer {
+  height: 10px;
+  width: 20px;
+  border: 3px solid red;
+}
+
 @media (max-width: 810px) {
   .product-container,
   .imagecontainer,
@@ -136,7 +143,7 @@ h2 {
 /*product css end*/
 
 #logoicon {
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0;
   display: inline-flex;
 }
 
@@ -161,6 +168,9 @@ footer {
   text-align: center;
   height: 125px;
   border: violet 1px solid;
+  display: block;
+  float: left;
+  width: 100%;
 }
 
 .inner_header {
@@ -187,10 +197,12 @@ nav {
   margin-top: 10px;
 }
 
-.container {
+.container,
+.grid-container {
   margin: 20px auto;
   max-width: 1180px;
   width: auto;
+  height: fit-content;
 }
 
 .topcontainer {
@@ -290,7 +302,7 @@ a:hover {
   /*border: 1px solid chartreuse;*/
   justify-content: space-evenly;
   text-align: center;
-  min-width: 74px;
+  min-width: 50px;
 }
 
 .image1 {
@@ -311,15 +323,62 @@ a:hover {
     justify-content: space-between;
   }
   p {
-    font-size: 12px;
-    border: 1px solid springgreen;
+    font-size: 10px;
+  }
+
+  .searchbar1 {
+    width: 260px;
+    height: 34px;
+  }
+  .search {
+    width: 220px;
+  }
+
+  .col {
+    margin: 0;
+    padding: 0;
   }
 }
+
+/*START CSS ALL GAMES START*/
+
+.all-games {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid chartreuse;
+}
+
+/*
+.picbox{}
+
+.textbox{}
+
+.buttonbox{}
+*/
+
+.gamepic {
+  border-radius: 10%;
+}
+
+#grid div {
+  float: left;
+  padding: 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-gap: 20px;
+}
+
+#grid div img {
+  width: 190px;
+}
+
+/*END CSS ALL GAMES END*/
 
 @media (max-width: 1080px) {
   label.logo {
     font-size: 30px;
-    padding-left: 50px;
+
+    border: 1px solid gold;
   }
 
   nav ul li a {
@@ -365,7 +424,7 @@ a:hover {
   }
 }
 section {
-  background: url(./images/backdropcomprcrop.jpg);
+  /*background: url(./images/backdropcomprcrop.jpg);*/
   background-size: cover;
   height: calc(100vh - 80px);
   background-position: center;
