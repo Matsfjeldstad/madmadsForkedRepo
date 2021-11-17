@@ -185,8 +185,44 @@ footer {
 }
 
 #corporate-container {
-  border: 1px solid cyan;
+  /*border: 1px solid cyan;*/
   margin: 10px auto;
+  align-items: left;
+  border: 1px var(--brand-light-gray);
+}
+
+.corporate-container-2 {
+  text-align: center;
+  border: 1px solid var(--brand-light-gray);
+}
+
+.must {
+  color: red;
+}
+.nomust {
+  color: transparent;
+}
+
+.textfield input {
+  width: 300px;
+  height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .corporate-container-2 {
+    text-align: center;
+    align-content: center;
+    border: 1px solid var(--brand-light-gray);
+  }
+}
+
+#qntcnt {
+  max-width: 30px;
+}
+#promo {
+  width: 50px;
 }
 
 footer {
@@ -204,7 +240,7 @@ footer {
   margin: 0 auto;
   background-color: var(--brand-light-gray);
   height: 160px;
-  border: 1px solid chartreuse;
+  /*border: 1px solid chartreuse;*/
 }
 
 .shortfooter {
