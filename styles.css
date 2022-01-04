@@ -514,13 +514,6 @@ a:hover {
   }
 }
 
-.grid-item,
-.product-container,
-.imagecontainer,
-.buttoncontainer {
-  z-index: -1;
-}
-
 /*END CSS ALL GAMES END*/
 
 @media (max-width: 1080px) {
@@ -570,6 +563,7 @@ a:hover {
   }
   #check:checked ~ ul {
     left: 0;
+    z-index: 5;
   }
 }
 
