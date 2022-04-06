@@ -1,3 +1,25 @@
+/*
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-dark-yellow);
+  color: var(--clr-mint);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}*/
+
 html {
   font-family: Montserrat;
   background: var(--brand-purple);
@@ -7,6 +29,10 @@ body {
   color: var(--brand-white);
   height: 100%;
 }
+
+/*p {
+  max-width: 50ch;
+}*/
 
 :root {
   --brand-purple: #1b203d;
@@ -42,11 +68,11 @@ body {
 }
 
 .col {
-  flex: 20%;
+  /*flex: 20%;
   /*padding: 5px;*/
-  flex-basis: 100%;
+  /*flex-basis: 100%;*/
   /*border: 1px solid chartreuse;*/
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
   text-align: center;
 }
 .col img {
@@ -66,10 +92,61 @@ body {
 */
 .subsections {
   display: flex;
-  max-width: 1180px;
+  /*max-width: 1180px;*/
   margin: 10px auto;
-  color: antiquewhite;
   text-justify: center;
+} /*
+.col2 img {
+  border-radius: 10%;
+  border: 3px solid red;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-justify: left;
+}
+
+@media (max-width: 1080px) {
+  .col2 {
+    border: 3px solid red;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-justify: left;
+  }
+}*/
+
+.col2 {
+  display: inline-block;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 8px;
+  padding: 8px;
+}
+
+.col2 img {
+  border-radius: 10%;
+  padding: 8px;
+}
+@media (max-width: 810px) {
+  .categories-pic {
+    max-width: 400px; 
+  }
+  .subsections {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 533px) {
+  .col2 {
+    margin: 0 auto;
+  }
+  .col2 {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 /*product css*/
@@ -191,15 +268,15 @@ footer {
 
 #corporate-container {
   /*border: 1px solid cyan;*/
-  margin: 10px auto;
+  margin: 8px auto;
+  padding: 8px;
   align-items: left;
-  border: 1px var(--brand-light-gray);
 }
 
 .corporate-container-2 {
-  margin: 10 px auto;
+  margin: 8px auto;
+  padding: 8px;
   text-align: center;
-  border: 1px solid var(--brand-light-gray);
 }
 
 .must {
@@ -214,13 +291,14 @@ footer {
   height: 40px;
   font-size: 14px;
   text-align: center;
+  margin: 8px;
+  padding: 8px;
 }
 
 @media only screen and (max-width: 900px) {
   .corporate-container-2 {
     text-align: center;
     align-content: center;
-    border: 1px solid var(--brand-light-gray);
     margin: 8px;
   }
 }
@@ -232,16 +310,6 @@ footer {
   width: 50px;
 }
 
-footer {
-  text-align: center;
-  height: 125px;
-  /*border: violet 1px solid;*/
-  display: block;
-  float: left;
-  width: 100%;
-  bottom: 0px;
-  margin-top: 8px;
-}
 
 .inner_header {
   max-width: 1180px;
@@ -251,15 +319,14 @@ footer {
   /*border: 1px solid chartreuse;*/
 }
 
-.shortfooter {
+/*.shortfooter {
   bottom: 0;
   text-align: center;
   height: 125px;
   /*border: violet 1px solid;*/
-  display: block;
-
+/* display: block;
   width: 100%;
-}
+}*/
 
 nav {
   background: var(--brand-light-gray);
@@ -292,9 +359,7 @@ nav {
   margin: 20px auto;
   justify-content: space-between;
 }
-h3 {
-  text-align: left;
-}
+
 .spacer {
   width: 20px;
   height: 20px;
@@ -400,7 +465,8 @@ a:hover {
     justify-content: space-between;
   }
   p {
-    font-size: 10px;
+    font-size: 1em;
+
   }
 
   .searchbar1 {
@@ -427,26 +493,39 @@ a:hover {
 /*START CSS ALL GAMES START*/
 
 #grid div {
-  border: springgreen 1px solid;
-  display: flex;
+  display: inline-block;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 8px;
 }
 
-.gamepic {
-  width: 100%;
+@media (max-width: 533px) {
+  .gamepic {
+    margin: 0 auto;
+  }
+  #grid div {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
+
+/*.gamepic {
+  width: 100%;
+}*/
 
 *.icon {
   width: 12px;
   margin: 0 auto;
+  vertical-align: middle;
 }
 
 .grid-item {
   height: fit-content;
   /*margin: 0.5em 0.5em;*/
   text-align: center;
-  max-width: fit-content;
+  display: flex;
+  /*max-width: fit-content;*/
 }
 
 .picbox,
@@ -455,6 +534,9 @@ a:hover {
   margin: 0 auto;
   padding: 0;
   /*border: 1px solid cyan;*/
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .textbox {
@@ -462,18 +544,19 @@ a:hover {
   text-align: center;
 }
 
-.buttonbox {
+/*.buttonbox {
   margin: 0 auto;
   display: block;
-}
+border: 2px solid red;
+}*/
 
 .button-sml {
   cursor: pointer;
   color: var(--brand-white);
   background: var(--brand-green);
-  border-radius: 5%;
-  padding: 5px 2px;
-  margin: 0 auto;
+  /*border-radius: 20%;
+  /*padding: 5px 2px;
+  margin: 0 auto;*/
   font-size: 10px;
   width: 130px;
   height: 30px;
@@ -484,6 +567,7 @@ a:hover {
   border-radius: 10%;
   max-width: 220px;
   display: flex;
+  align-items: center;
 }
 
 .icon {
@@ -492,16 +576,15 @@ a:hover {
   display: inline-block;
   align-self: center;
 }
-
+/*
 @media (max-width: 767px) {
   p {
-    /*text-align: left;*/
+    text-align: left;
   }
 
   #grid div {
-    /*border: springgreen 1px solid;*/
-    display: block;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .gamepic {
@@ -513,10 +596,19 @@ a:hover {
   }
 
   .grid-item {
+    display: flex;
+    justify-content: center;
     max-width: 220px;
     margin: 1.5em 1.5em;
   }
-}
+}*/
+
+/*@media (max-width: 767px) {
+  #grid div {
+    align-items: center;
+    border: 1px solid chartreuse;
+  }
+}*/
 
 /*END CSS ALL GAMES END*/
 
@@ -572,10 +664,14 @@ a:hover {
   }
 }
 
-/*backgroundimage {
-  background: url(./images/backdropcomprcrop.jpg);
-  background-size: cover;
-  height: calc(100vh - 80px);
-  background-position: center;
-  background-repeat: no-repeat;
-}*/
+
+footer {
+  text-align: center;
+  border: 3px solid red;
+  height: 125px;
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+bottom: 0;
+}
+
