@@ -110,7 +110,7 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       width: 400px;
       max-width: 100%;
-      margin: 20% auto;
+      margin: 100px auto;
     }
 
     /*.form {
@@ -148,18 +148,28 @@
     }
 
     .form-control.success input {
-      border-color: var(--brand-green);
+      border: 3px solid var(--brand-green);
     }
 
     .form-control.error input {
-      border-color: red;
+      border: 3px solid red;
     }
 
     .form-control i {
       position: absolute;
-      top: 40px;
+      top: 30px;
       right: 10px;
       visibility: hidden;
+    }
+
+    .form-control.success i.fa-check-circle {
+      color: var(--brand-green);
+      visibility: visible;
+    }
+
+    .form-control.error i.fa-exclamation-circle {
+      color: red;
+      visibility: visible;
     }
 
     .form-control small {
@@ -167,6 +177,10 @@
       position: absolute;
       bottom: 0;
       left: 0;
+    }
+    .form-control.error small {
+      color: red;
+      visibility: visible;
     }
 
     button {
@@ -278,4 +292,5 @@
     /></a>
     <p>© Gamehub 2021</p>
   </footer>
+  
 </html>
