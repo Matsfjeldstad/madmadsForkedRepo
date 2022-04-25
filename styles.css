@@ -20,6 +20,10 @@ html, body {
   margin: 0 auto;
 }*/
 
+a {
+  cursor:pointer;
+}
+
 html {
   font-family: Montserrat;
   background: var(--brand-purple);
@@ -191,6 +195,7 @@ button {
   padding: 5px;
   margin: 0 auto;
   display: inline-block;
+  cursor:pointer;
 }
 
 h2 {
@@ -668,10 +673,95 @@ border: 2px solid red;
 footer {
   text-align: center;
   border: 3px solid red;
-  height: 125px;
+  height: 160px;
   display: block;
   width: 100%;
-  margin-top: 8px;
-bottom: 0;
+  margin-top: 150px;
+  bottom: 0;
 }
+
+
+
+    .corporate-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      width: 400px;
+      max-width: 100%;
+      margin: 8px auto;
+    }
+
+    /*.form {
+      padding: 30px 40px;
+      border: 2px solid red;
+    }*/
+
+    .form-header {
+      text-align: center;
+    }
+
+    .account-form {
+      padding: 8px 16px;
+    }
+
+    .form-control {
+      margin-bottom: 10px;
+      /*padding-bottom: 10px;*/
+      position: relative;
+      text-align: center;
+    }
+
+    .form-control label {
+      /* display: inline-block;*/
+      margin-bottom: 5px;
+    }
+
+    .form-control input {
+      border: 2px #f0f0f0;
+      border-radius: 4px;
+      display: block;
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .form-control.success input {
+      border: 3px solid var(--brand-green);
+    }
+
+    .form-control.error input {
+      border: 3px solid red;
+    }
+
+    .form-control i {
+      position: absolute;
+      top: 30px;
+      right: 10px;
+      visibility: hidden;
+    }
+
+    .form-control.success i.fa-check-circle {
+      color: var(--brand-green);
+      visibility: visible;
+    }
+
+    .form-control.error i.fa-exclamation-circle {
+      color: red;
+      visibility: visible;
+    }
+
+    .form-control small {
+      visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .form-control.error small {
+      color: red;
+      visibility: visible;
+    }
+
+ 
 

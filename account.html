@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/GameHub_Logo.png" />
+    <script src="script-login.js"></script>
+    <script src="/script-login.js"></script>
     <title>GAMEHUB Account Page | Claes' Course Assignment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,9 +39,16 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
-    <script src="./script-account.js"></script>
+
+    <script src="script-login.js"></script>
+    <script src="/script-login.js"></script>
     <title>GAMEHUB claesf0</title>
   </head>
+  <style>
+    footer {
+      margin-top: 200px;
+    }
+  </style>
   <header>
     <div class="inner_header">
       <nav>
@@ -62,7 +71,9 @@
           <li><a href="product-page-1-FURIOUS.html">Pre-orders</a></li>
           <li><a href="categories.html">Categories</a></li>
           <li><a href="cart.html">Cart</a></li>
-          <li><a href="account.html">Account</a></li>
+          <li>
+            <span id="loginfield"><a href="login-signup.html">Log In</a></span>
+          </li>
         </ul>
         <div class="searchbox">
           <div class="searchbar">
@@ -102,113 +113,16 @@
       min-height: 100vh;
     }
 
-    .corporate-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      width: 400px;
-      max-width: 100%;
-      margin: 100px auto;
-    }
-
-    /*.form {
-      padding: 30px 40px;
-      border: 2px solid red;
-    }*/
-
-    .form-header {
-      text-align: center;
-    }
-
-    .account-form {
-      padding: 8px 16px;
-    }
-
-    .form-control {
-      margin-bottom: 10px;
-      /*padding-bottom: 10px;*/
-      position: relative;
-      text-align: center;
-    }
-
-    .form-control label {
-      /* display: inline-block;*/
-      margin-bottom: 5px;
-    }
-
-    .form-control input {
-      border: 2px #f0f0f0;
-      border-radius: 4px;
-      display: block;
-      font-size: 14px;
-      padding: 10px;
-      width: 100%;
-    }
-
-    .form-control.success input {
-      border: 3px solid var(--brand-green);
-    }
-
-    .form-control.error input {
-      border: 3px solid red;
-    }
-
-    .form-control i {
-      position: absolute;
-      top: 30px;
-      right: 10px;
-      visibility: hidden;
-    }
-
-    .form-control.success i.fa-check-circle {
-      color: var(--brand-green);
-      visibility: visible;
-    }
-
-    .form-control.error i.fa-exclamation-circle {
-      color: red;
-      visibility: visible;
-    }
-
-    .form-control small {
-      visibility: hidden;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-    .form-control.error small {
-      color: red;
-      visibility: visible;
-    }
-
     button {
       width: 100%;
     }
   </style>
   <body>
     <div class="form-header">
-      <h2>OVERSKRIFT</h2>
+      <h2>Create Account</h2>
     </div>
     <div class="corporate-container">
       <form class="account-form" id="form-one">
-        <div class="form-control success">
-          <label>Username</label>
-          <input type="text" placeholder="brukernavn" id="username" />
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <br />
-          <small>Error message</small>
-        </div>
-        <div class="form-control error">
-          <label>Username</label>
-          <input type="text" placeholder="brukernavn" id="username" />
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <br />
-          <small>Error message</small>
-        </div>
         <div class="form-control">
           <label>Username</label>
           <input type="text" placeholder="brukernavn" id="username" />
@@ -217,25 +131,51 @@
           <br />
           <small>Error message</small>
         </div>
+
         <div class="form-control">
-          <label>Username</label>
-          <input type="text" placeholder="brukernavn" id="username" />
+          <label>Email</label>
+          <input type="email" placeholder="E-Mail" id="email" />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <br />
           <small>Error message</small>
         </div>
+        <!--
         <div class="form-control">
           <label>Username</label>
-          <input type="text" placeholder="brukernavn" id="username" />
+          <input type="text" placeholder="Username" id="username2" />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <br />
           <small>Error message</small>
         </div>
+      -->
+
+        <!--<div class="form-control">
+          <label>Email</label>
+          <input type="email" placeholder="E-Mail" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>-->
+
         <div class="form-control">
-          <label>Username</label>
-          <input type="text" placeholder="brukernavn" id="username" />
+          <label>Password</label>
+          <input type="password" placeholder="Password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Repeat Password</label>
+          <input
+            type="password"
+            placeholder="Repeat password"
+            id="passwordCheck"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <br />
@@ -280,6 +220,7 @@
       </div>
       <br />
     </div>-->
+    <script src="./script-account.js"></script>
   </body>
 
   <footer>
@@ -292,5 +233,4 @@
     /></a>
     <p>© Gamehub 2021</p>
   </footer>
-  
 </html>

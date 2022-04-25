@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/GameHub_Logo.png" />
-    <title>GAMEHUB Homepage | Claes' Course Assignment</title>
+    <script
+      src="script-login.js"
+    ></script><script
+      src="/script-login.js"
+    defer></script><title>
+
+
+GAMEHUB Homepage | Claes' Course Assignment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +39,14 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-    <title>GAMEHUB claesf0</title>
+    <script
+      src="script-login.js"
+    ></script><script
+      src="/script-login.js"
+    defer></script><title>
+
+
+GAMEHUB claesf0</title>
   </head>
   <header>
     <div class="inner_header">
@@ -56,7 +70,7 @@
           <li><a href="product-page-1-FURIOUS.html">Pre-orders</a></li>
           <li><a href="categories.html">Categories</a></li>
           <li><a href="cart.html">Cart</a></li>
-          <li><a href="account.html">Account</a></li>
+          <li><a href="login-signup.html" id="loginfield">Log In</a></li>
         </ul>
         <div class="searchbox">
           <div class="searchbar">
@@ -90,6 +104,7 @@
     </div>
   </header>
   <body>
+    <!-- 
     <div class="container">
     <div class="corporate-container-2">    <h4>Exit<a href="index.html"></h4><button style="background-color: red;"><h3>X</h3></button></a>
       <br><br>
@@ -120,17 +135,139 @@
                       <a href="https://youtu.be/RfiQYRn7fBg?t=10"><button>Not received confirmation?</button></a><br><br>
     </div>
   </div>
-</div>
-  <div class="shortfooter">
-    <footer>
-      <a href="index.html">
-        <img
-          src="./images/GameHub_Logo.png"
-          height="88px"
-          alt="GameHub-Logo"
-          id="logoicon"
-      /></a>
-      <p>© Gamehub 2021</p>
-    </footer>
-  </div>
+</div> 
+-->
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  button {
+    width: 100%;
+  }
+</style>
+  <body>
+    <div class="form-header">
+      <h2>Create Account</h2>
+    </div>
+    <div class="corporate-container">
+      <form class="account-form" id="form-one" action="success.html">
+        <div class="form-control">
+          <label>Username</label>
+          <input type="text" placeholder="brukernavn" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Email</label>
+          <input type="email" placeholder="E-Mail" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+        <!--
+        <div class="form-control">
+          <label>Username</label>
+          <input type="text" placeholder="Username" id="username2" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+      -->
+
+        <!--<div class="form-control">
+          <label>Email</label>
+          <input type="email" placeholder="E-Mail" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>-->
+
+        <div class="form-control">
+          <label>Password</label>
+          <input type="password" placeholder="Password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Repeat Password</label>
+          <input
+            type="password"
+            placeholder="Repeat password"
+            id="passwordCheck"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+        <a href="success.html"></a><button onclick="passvalues();">Submit</button></a>
+      </form>
+    </div>
+    
+
+    <!-- <br />
+    <div class="corporate-container-2">
+      <span><h2>My Account</h2></span>
+      <div class="textfield">
+        <h5 style="text-align: center">Mail</h5>
+        <input placeholder="Your email" type="email" />
+      </div>
+      <div class="textfield">
+        <h5 style="text-align: center">Change heshword</h5>
+        <a href="https://youtu.be/RfiQYRn7fBg?t=10">
+          <input placeholder="Password" type="submit"
+        /></a>
+      </div>
+
+      <div class="corporate-container-2">
+        <div class="textfield">
+          <h5 style="text-align: center">Shipping adrhessh</h5>
+          <input placeholder="Telheshphone number" type="tel" />
+        </div>
+        <div class="textfield">
+          <input placeholder="Street adrhessh" type="text" />
+        </div>
+        <div class="textfield"><input placeholder="City" type="text" /></div>
+        <div class="textfield">
+          <input placeholder="Zip-code" type="text" />
+        </div>
+        <div class="textfield"><input placeholder="Country" type="text" /></div>
+        <br />
+      </div>
+      <p style="font-size: 12px">Date of birth:</p>
+      <div class="textfield">
+        <input placeholder="Date of birth" type="date" style="width: 173px" />
+      </div>
+      <br />
+    </div>-->
+    <script src="./script-account.js"></script>
+  </body>
+
+  <footer  style="position: absolute; bottom: 0;">
+    <a href="index.html">
+      <img
+        src="./images/GameHub_Logo.png"
+        height="88px"
+        alt="GameHub-Logo"
+        id="logoicon"
+    /></a>
+    <p>© Gamehub 2021</p>
+  </footer>
 </html>
+
+

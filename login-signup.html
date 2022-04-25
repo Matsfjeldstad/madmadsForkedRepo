@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/GameHub_Logo.png" />
-    <title>GAMEHUB Homepage | Claes' Course Assignment</title>
+    <script
+      src="/script-login.js"
+    defer></script><title>
+
+GAMEHUB Homepage | Claes' Course Assignment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +36,11 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-    <title>GAMEHUB claesf0</title>
+    <script
+      src="/script-login.js"
+    defer></script><title>
+
+GAMEHUB claesf0</title>
   </head>
   <header>
     <div class="inner_header">
@@ -56,7 +64,7 @@
           <li><a href="product-page-1-FURIOUS.html">Pre-orders</a></li>
           <li><a href="categories.html">Categories</a></li>
           <li><a href="cart.html">Cart</a></li>
-          <li><a href="account.html">Account</a></li>
+          <li><a href="login-signup.html" id="loginfield">Log In</a></li>
         </ul>
         <div class="searchbox">
           <div class="searchbar">
@@ -90,27 +98,122 @@
   <body>
 
     <div class="container" id="corporate-container">
-        <p>Exit<a href="index.html"></p><button style="background-color: red; margin-left: 0;"><h3>X</h3></button></a>
-              <br><br>
-                        <span><h2>Sign in to Gamehub</h2></span>
-                                <div class="textfield"><input placeholder="Username / Mail" type="email"/></div>
-                              <div class="textfield"><input placeholder="Password" type="password"/></div>
-                              <a href="checkout.html"><button>Submit</button></a>
-                              <br>
-                              <br>
-                      <a href="https://youtu.be/RfiQYRn7fBg?t=10"><button>Forgot Password?</button></a><br><br>
-                        <a href="signup.html"><button>Create New Account</button></a>
+        <a href="index.html"></p><button onclick="logOut()" id="logoutbutton" style="background-color: red; right: 33%; position: absolute; width: fit-content;"><h3>LOG OUT</h3></button></a>
+              <br><br><p>Log out function works, but I could not spend any more time trying to remember how to innerHTML it back</p><p>Upon successful validation check out <a href="success.html" style="color: blue;">success.html</a> where it will use data from local storage but I cant figure out redirect only after successful valdation</p><br>
+              
+               
+       
+        
+    
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  button {
+    width: 100%;
+  }
+</style>
+  <body>
+    <!--<div class="form-header">
+      <h2>Sign in to GameHub</h2>
     </div>
-  <div class="shortfooter">
-    <footer>
-      <a href="index.html">
-        <img
-          src="./images/GameHub_Logo.png"
-          height="88px"
-          alt="GameHub-Logo"
-          id="logoicon"
-      /></a>
-      <p>© Gamehub 2021</p>
-    </footer>
-  </div>
+    <div class="corporate-container">
+      <form class="account-form" id="form-one" action="#">
+        <div class="form-control">
+          <label>Username</label>
+          <input type="text" placeholder="Username" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+
+        
+
+        <div class="form-control">
+          <label>Password</label>
+          <input type="password" placeholder="Password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+        <a href="#"></a><button onclick="passvalues();">Submit</button></a><br>
+        <div class="form-control"><br>
+          <label>Forgot password?</label>
+          <input type="email" placeholder="E-Mail" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+          <a href="https://youtu.be/RfiQYRn7fBg?t=10"><button>Forgot Password?</button></a>
+        </div>
+      -->
+      </form>
+    </div>
+    <div class="form-header">
+      <h2>Create Account</h2>
+    </div>
+    <div class="corporate-container">
+      <form class="account-form" id="form-one" action="success.html" onsubmit="return validate_form()">
+        <div class="form-control">
+          <label>Username</label>
+          <input type="text" placeholder="Username" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Email</label>
+          <input type="email" placeholder="E-Mail" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+   
+        <div class="form-control">
+          <label>Password</label>
+          <input type="password" placeholder="Password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Repeat Password</label>
+          <input
+            type="password"
+            placeholder="Repeat password"
+            id="passwordCheck"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <br />
+          <small>Error message</small>
+        </div>
+        <a href="success.html"><button onclick="passvalues();">Submit</button></a>
+      </form>
+      </div>
+    <script src="./script-account.js"></script>
+  </body>  
+  <footer>
+    <a href="index.html">
+      <img
+        src="./images/GameHub_Logo.png"
+        height="88px"
+        alt="GameHub-Logo"
+        id="logoicon"
+    /></a>
+    <p>© Gamehub 2021</p>
+  </footer>
 </html>
+

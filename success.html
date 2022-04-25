@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/GameHub_Logo.png" />
-    <title>GAMEHUB Homepage | Claes' Course Assignment</title>
+    <script
+      src="/script-login.js"
+    defer></script><title>
+
+GAMEHUB Homepage | Claes' Course Assignment</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,7 +36,12 @@
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-    <title>GAMEHUB claesf0</title>
+<script src="./script-account.js"></script>
+    <script
+      src="/script-login.js"
+    defer></script><title>
+
+GAMEHUB claesf0</title>
   </head>
   <header>
     <div class="inner_header">
@@ -56,7 +65,7 @@
           <li><a href="product-page-1-FURIOUS.html">Pre-orders</a></li>
           <li><a href="categories.html">Categories</a></li>
           <li><a href="cart.html">Cart</a></li>
-          <li><a href="account.html">Account</a></li>
+          <li><a href="login-signup.html" id="loginfield">Log In</a></li>
         </ul>
         <div class="searchbox">
           <div class="searchbar">
@@ -89,24 +98,31 @@
       </nav>
     </div>
   </header>
-  <body>
+  <body style="min-height: 100%;">
 
     <div class="container" id="corporate-container">
         <img src="./images/icons/Successimg.png" alt="Success!">
-        <br>
+        <br><div>
+        <h2>Thank you, <span id="result"></span></h2><br>
+</div>
+        <script>
+          document.getElementById("result").innerHTML=localStorage.getItem("usernamevalue");
+          document.getElementById("loginfield").innerHTML=localStorage.getItem("usernamevalue");
+        </script>
         <a href="index.html"><button style="background-color: #1fc742; margin-left: 0;"><h3>Confirm & return to home</h3></button></a>
 </div>
                        
-  <div class="shortfooter">
-    <footer>
-      <a href="index.html">
-        <img
-          src="./images/GameHub_Logo.png"
-          height="88px"
-          alt="GameHub-Logo"
-          id="logoicon"
-      /></a>
-      <p>© Gamehub 2021</p>
-    </footer>
-  </div>
+
+    
+  </body>
+  <footer style="position: absolute; bottom: 0;">
+    <a href="index.html">
+      <img
+        src="./images/GameHub_Logo.png"
+        height="88px"
+        alt="GameHub-Logo"
+        id="logoicon"
+    /></a>
+    <p>© Gamehub 2021</p>
+  </footer>
 </html>
