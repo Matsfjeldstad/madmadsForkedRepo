@@ -3,12 +3,6 @@ console.log("Login script linked, not yet running");
 document.getElementById("loginfield").innerHTML =
   localStorage.getItem("usernamevalue");
 
-function login() {
-  var uname = document.getElementById("username").value;
-  localStorage.setItem("usernamevalue", uname);
-  return false;
-}
-
 document.getElementById("logoutbutton").addEventListener("click", logOut);
 //eventlistener -> if localstorage !empty, then clear
 function logOut() {
@@ -34,7 +28,7 @@ console.log("Login script linked and 2 of 2 running");
 
           }*/
 
-/*const signUpFormOne = document.getElementById("form-one");
+/*
         let loggedInName = localStorage.getItem("usernamevalue");
         console.log(loggedInName);
         console.log("test");

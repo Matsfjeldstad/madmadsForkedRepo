@@ -1,3 +1,5 @@
+/* DISCLAIMER: this is collected from https://www.youtube.com/watch?v=YeFzkC2awTM&ab_channel=WebDevSimplified*/
+
 console.log("Cart script initializing")
 if(document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)

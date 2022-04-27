@@ -1,6 +1,6 @@
 console.log("Account-script initializing")
 
-const form = document.getElementById('form-one');
+const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -9,10 +9,10 @@ const password2 = document.getElementById('passwordCheck');
 
 form.addEventListener('submit',(e)=> {
      e.preventDefault();
-/* MEMO TO ME THIS IS WHERE YOU NEED TO ALTER IN ORDER FOR IT TO REDIRECT, UPON SUCCESS. Will leave it for now. */
+
     checkInputs();
 });
-
+/* MEMO TO ME THIS IS WHERE YOU NEED TO ALTER IN ORDER FOR IT TO REDIRECT, UPON SUCCESS. Will leave it for now. */
 function checkInputs(){
     //get thevalues from the inputs
     const usernameValue = username.value.trim();
@@ -72,7 +72,7 @@ function isEmail(email){
 
 }
 
-/*
+
   function login(){
     var uname = document.getElementById("username").value;
     localStorage.setItem("usernamevalue", uname);
@@ -91,7 +91,7 @@ function isEmail(email){
                     }
                     /*const login = 
                     login.innerHTML = <li><a href="login-signup.html" id="loginfield">Log In</a><a href="account.html" id="accountfield"></a></li>*/
-//                };
+            };
 
 // make so you hide the class="loginsignupbutton" from cart, when logged in. 
 //Make it so that this class will instead redirect to checkout
