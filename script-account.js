@@ -1,8 +1,11 @@
+console.log("Account-script initializing")
+
 const form = document.getElementById('form-one');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('passwordCheck');
+
 
 form.addEventListener('submit',(e)=> {
      e.preventDefault();
@@ -70,8 +73,8 @@ function isEmail(email){
 }
 
 
-  function passvalues(){
-    var uname=document.getElementById("username").value;
+  function login(){
+    var uname = document.getElementById("username").value;
     localStorage.setItem("usernamevalue", uname);
     return false;
   }
@@ -80,6 +83,13 @@ function isEmail(email){
                 //eventlistener -> if localstorage !empty, then clear
                 function logOut(){
                     localStorage.clear();
-                    /*const login = document.getElementById("loginfield");
-                    login.innerHTML = <li><a href="login-signup.html" id="loginfield">Log In</a></li>*/
+                    const defaultNav = document.getElementById("loginfield");
+                    if (localStorage === '') {
+                        defaultNav.style.display = 'block';
+                    }
+                    /*const login = 
+                    login.innerHTML = <li><a href="login-signup.html" id="loginfield">Log In</a><a href="account.html" id="accountfield"></a></li>*/
                 };
+
+// make so you hide the class="loginsignupbutton" from cart, when logged in. 
+//Make it so that this class will instead redirect to checkout

@@ -5,6 +5,13 @@
           document.getElementById("result").innerHTML=localStorage.getItem("usernamevalue");
           console.log("Login script linked and 2 of 2 running");
           
+          /*
+          function(login) {
+
+
+          }*/
+
+
         /*const signUpFormOne = document.getElementById("form-one");
         let loggedInName = localStorage.getItem("usernamevalue");
         console.log(loggedInName);
@@ -17,3 +24,5 @@
             localStorage.removeItem("usernamevalue");
           }
           */
+
+          
