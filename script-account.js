@@ -72,24 +72,26 @@ function isEmail(email){
 
 }
 
-
+/*
   function login(){
     var uname = document.getElementById("username").value;
     localStorage.setItem("usernamevalue", uname);
     return false;
   }
 
+  
+
   document.getElementById("logoutbutton").addEventListener("click", logOut);
                 //eventlistener -> if localstorage !empty, then clear
                 function logOut(){
                     localStorage.clear();
-                    const defaultNav = document.getElementById("loginfield");
+                    var defaultNav = document.getElementById("loginfield");
                     if (localStorage === '') {
-                        defaultNav.style.display = 'block';
+                    
                     }
                     /*const login = 
                     login.innerHTML = <li><a href="login-signup.html" id="loginfield">Log In</a><a href="account.html" id="accountfield"></a></li>*/
-                };
+//                };
 
 // make so you hide the class="loginsignupbutton" from cart, when logged in. 
 //Make it so that this class will instead redirect to checkout
